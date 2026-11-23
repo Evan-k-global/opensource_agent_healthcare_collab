@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeko.io/mba/schemas/zeko-registry-anchor.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "networkId",
+    "networkName",
+    "signingNetworkId",
+    "nativeAsset",
+    "registryAddress",
+    "transactionHash",
+    "sequence",
+    "registryRoot",
+    "missionIdHash",
+    "capabilityCommitment",
+    "approvalCommitment",
+    "receiptCommitment",
+    "nullifier",
+    "paymentContextDigest",
+    "beneficiary",
+    "payoutNanomina",
+    "protocolFeeNanomina",
+    "payoutNativeUnits",
+    "protocolFeeNativeUnits",
+    "proofArtifactHash",
+    "anchoredAt",
+    "anchorId",
+    "anchorHash"
+  ],
+  "properties": {
+    "version": {
+      "enum": [
+        "mba-zeko-registry-anchor-v2",
+        "mba-zeko-registry-anchor-v3"
+      ]
+    },
+    "networkId": { "enum": ["zeko:testnet", "zeko:sepolia"] },
+    "protocolNetworkId": { "const": "zeko:sepolia" },
+    "graphqlNetworkId": { "const": "zeko:testnet" },
+    "networkName": { "const": "Zeko Ethereum Sepolia" },
+    "signingNetworkId": { "const": "testnet" },
+    "nativeAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["symbol", "decimals", "standard", "tokenId"],
+      "properties": {
+        "symbol": { "const": "sETH" },
+        "decimals": { "const": 9 },
+        "standard": { "const": "native" },
+        "tokenId": { "const": "wSHV2S4qX9jFsLjQo8r1BsMLH2ZRKsZx6EJd1sbozGPieEC4Jf" }
+      }
+    },
+    "registryAddress": { "type": "string", "pattern": "^B62" },
+    "transactionHash": { "type": "string", "minLength": 1 },
+    "sequence": { "$ref": "#/$defs/uint" },
+    "registryRoot": { "$ref": "#/$defs/uint" },
+    "missionIdHash": { "$ref": "#/$defs/uint" },
+    "capabilityCommitment": { "$ref": "#/$defs/uint" },
+    "approvalCommitment": { "$ref": "#/$defs/uint" },
+    "receiptCommitment": { "$ref": "#/$defs/uint" },
+    "nullifier": { "$ref": "#/$defs/uint" },
+    "paymentContextDigest": { "$ref": "#/$defs/uint" },
+    "beneficiary": { "type": "string", "pattern": "^B62" },
+    "payoutNanomina": { "$ref": "#/$defs/uint" },
+    "protocolFeeNanomina": { "$ref": "#/$defs/uint" },
+    "payoutNativeUnits": { "$ref": "#/$defs/uint" },
+    "protocolFeeNativeUnits": { "$ref": "#/$defs/uint" },
+    "proofArtifactHash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "blockHeight": { "type": ["string", "null"], "pattern": "^[0-9]+$" },
+    "anchoredAt": { "type": "string", "format": "date-time" },
+    "anchorId": { "type": "string", "minLength": 1 },
+    "anchorHash": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  },
+  "if": {
+    "properties": {
+      "version": { "const": "mba-zeko-registry-anchor-v3" }
+    },
+    "required": ["version"]
+  },
+  "then": {
+    "required": ["protocolNetworkId", "graphqlNetworkId"],
+    "properties": {
+      "networkId": { "const": "zeko:sepolia" },
+      "protocolNetworkId": { "const": "zeko:sepolia" },
+      "graphqlNetworkId": { "const": "zeko:testnet" }
+    }
+  },
+  "else": {
+    "properties": {
+      "networkId": { "const": "zeko:testnet" },
+      "protocolNetworkId": false,
+      "graphqlNetworkId": false
+    }
+  },
+  "$defs": {
+    "uint": { "type": "string", "pattern": "^[0-9]+$" }
+  }
+}

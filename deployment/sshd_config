@@ -1,0 +1,16 @@
+Port 22
+HostKey /etc/ssh/demo/ssh_host_ed25519_key
+AuthorizedKeysFile /etc/ssh/demo/authorized_keys
+PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitRootLogin no
+AllowUsers researcher
+UsePAM no
+StrictModes yes
+AllowTcpForwarding yes
+PermitOpen 127.0.0.1:7421 127.0.0.1:7422
+GatewayPorts no
+X11Forwarding no
+PrintMotd no
+Subsystem sftp internal-sftp

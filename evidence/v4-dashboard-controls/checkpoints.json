@@ -1,0 +1,26 @@
+[
+  {
+    "checkpoint": "plan_agreement",
+    "humanReview": "approved"
+  },
+  {
+    "checkpoint": "plan_agreement",
+    "humanReview": "approved"
+  },
+  {
+    "checkpoint": "before_compute",
+    "humanReview": "approved"
+  },
+  {
+    "checkpoint": "before_disclosure",
+    "humanReview": "approved"
+  },
+  {
+    "checkpoint": "before_compute",
+    "humanReview": "approved"
+  },
+  {
+    "checkpoint": "before_settlement",
+    "humanReview": "approved"
+  }
+]

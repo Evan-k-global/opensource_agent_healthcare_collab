@@ -1,0 +1,13 @@
+{
+  "reviewer": { "kind": "pending-human-or-agent", "name": null, "date": null },
+  "archiveSha256": null,
+  "sourceChanges": [],
+  "topology": { "physicalHostCountIndependentlyConfirmed": null, "sharedInferenceServer": null, "cacheReuse": null },
+  "versions": {},
+  "checks": { "unitTests": "not-run", "mockRealProofs": "not-run", "gemmaRealProofs": "not-run", "separateProofStateVerification": "not-run", "dashboardPrivacy": "not-run", "humanCheckpoints": "not-run", "modelRouting": "not-run", "liveIdentity": "pending", "physicalHosts": "pending" },
+  "approvalOperator": "pending-human-or-simulated-test",
+  "commands": [],
+  "failures": [],
+  "environmentAdjustments": [],
+  "verdict": "pending"
+}

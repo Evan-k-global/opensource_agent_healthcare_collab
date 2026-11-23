@@ -1,0 +1,22 @@
+{
+  "synthetic": true,
+  "freshIdentitiesLedgerAndVolumes": true,
+  "minaContainerRunning": false,
+  "liveL1Dependency": false,
+  "bootstrapService": "synthetic-metadata-fixture",
+  "l1CommitsEnabled": false,
+  "sequencerRestarted": true,
+  "postRestartSignatureSmoke": {
+    "endpoint": "http://127.0.0.1:19231/graphql",
+    "signatureOnlySmoke": true,
+    "state": "42",
+    "address": "B62qqaBcXPYzyQTSfUsz13AGraaLnRp2Q84C7t7Bw6pUuqzDgr1Qb4e",
+    "transactionHash": "5JvBiEZL21anKipXt5kEHMqhPo4H23WXpSUfm9xrLV7pqYW2tyYz"
+  },
+  "nativeDaDiffCount": 4,
+  "nativeDaSignatureCount": 4,
+  "applicationProofInThisSmoke": false,
+  "realApplicationProofEvidence": "../v2-standalone-harness",
+  "host": "Apple Silicon macOS / OrbStack; linux-amd64 Zeko image emulation",
+  "physicalLinuxHostTested": false
+}

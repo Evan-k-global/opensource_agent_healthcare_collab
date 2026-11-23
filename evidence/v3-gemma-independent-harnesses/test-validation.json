@@ -1,0 +1,17 @@
+{
+  "nodeTestsPassed": 14,
+  "pythonRegressionTestsPassed": 3,
+  "node": "20.20.0",
+  "ollama": "0.40.17",
+  "modelExecution": "CPU; LLAMA_ARG_DEVICE=none; LLAMA_ARG_N_GPU_LAYERS=0",
+  "modelContext": 8192,
+  "ollamaKeepAlive": "30s",
+  "applicationStateAcceptedSeconds": 370,
+  "companyHarnessElapsedSeconds": {
+    "a": 369,
+    "b": 390
+  },
+  "minaRunning": false,
+  "physicalHosts": 1,
+  "independentHumanTester": false
+}

@@ -1,0 +1,13 @@
+Private Research Collaboration Demo
+Copyright 2026 Private Research Collaboration Demo contributors
+
+Original demo code and documentation are licensed under Apache License 2.0.
+This distribution includes Apache-2.0 components from SantaClawz and
+Agent Mission-Bound Authorization (AMBA). Their license texts, source revisions,
+and transformation notes are retained under vendor/.
+
+Dependencies, container images, the Google Antigravity SDK and model weights
+retain their respective upstream licenses. They are not relicensed by this
+NOTICE and are not bundled in the source archive.
+
+Optional Reclaim integration: adapter source is Apache-2.0. @reclaimprotocol/js-sdk 5.8.3 and its transitive dependencies retain their upstream licenses (https://github.com/reclaimprotocol/.github/blob/main/LICENSE). They are installed separately and are not relicensed or bundled as authored source.

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/approval.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "missionId", "missionHash", "approver", "approvedTools", "approvedScopes", "approvedRails", "approvedDomains", "holderKeyCommitment", "zekoHolderKeyCommitment", "missionSnapshot", "expiresAt", "approvalId", "approvalHash", "authorityJws"],
+  "properties": {
+    "version": { "const": "mission-approval-v1" },
+    "missionId": { "type": "string" },
+    "missionHash": { "type": "string" },
+    "approver": { "type": "object" },
+    "approvedTools": { "type": "array", "items": { "type": "string" } },
+    "approvedScopes": { "type": "array", "items": { "type": "string" } },
+    "approvedRails": { "type": "array", "items": { "type": "string" } },
+    "approvedDomains": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "holderKeyCommitment": { "type": ["string", "null"] },
+    "zekoHolderKeyCommitment": { "type": ["string", "null"] },
+    "missionSnapshot": { "type": "object" },
+    "expiresAt": { "type": "string" },
+    "approvalId": { "type": "string" },
+    "approvalHash": { "type": "string" },
+    "authorityJws": { "type": "string" },
+    "authoritySignature": { "type": ["string", "null"] },
+    "approvedAt": { "type": "string", "format": "date-time" },
+    "zekoAnchor": { "type": "object" }
+  }
+}

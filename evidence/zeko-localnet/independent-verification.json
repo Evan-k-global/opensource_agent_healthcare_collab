@@ -1,0 +1,9 @@
+{
+  "circuitKeyMatches": true,
+  "proofVerified": true,
+  "outputMatches": true,
+  "nodeStateMatches": true,
+  "sequencerRestarted": true,
+  "verificationProcess": "independent; expected circuit key compiled from source",
+  "testedAt": "2026-11-20T22:12:24.258708+00:00"
+}

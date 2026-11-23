@@ -1,0 +1,22 @@
+Commands selected by the independent reproducer, executed from its extracted package directory.
+The parent performed runtime execution using user-granted permissions; the reproducer inspected only fresh results.
+
+npm ci --ignore-scripts --offline --cache "$EXISTING_NPM_CACHE"
+npm test
+.venv/bin/python -m pip install --cache-dir ../pip-cache -r antigravity/requirements.txt
+.venv/bin/python -m pip freeze
+.venv/bin/python -m unittest discover -s antigravity -p 'test_*.py'
+
+COMPOSE_PROJECT_NAME=independent-repro-zeko ZEKO_PORT=19231 LOCAL_ZEKO_GRAPHQL=http://127.0.0.1:19231/graphql npm run zeko:up
+COMPOSE_PROJECT_NAME=independent-repro-zeko ZEKO_PORT=19231 LOCAL_ZEKO_GRAPHQL=http://127.0.0.1:19231/graphql npm run zeko:smoke
+
+.venv/bin/python deployment/init_hosts.py
+DOCKER_CONFIG="$WRITABLE_RUNTIME_DOCKER_CONFIG" DOCKER_HOST="unix://$ORBSTACK_DOCKER_SOCKET" COMPOSE_PROJECT_NAME=independent-repro-hosts npm run hosts:up
+LOCAL_ZEKO_GRAPHQL=http://127.0.0.1:19231/graphql .venv/bin/python deployment/validate_local_hosts.py --mock --zeko
+LOCAL_ZEKO_GRAPHQL=http://127.0.0.1:19231/graphql npm run verify:evidence -- ../result/mock --node
+
+curl -sS --max-time 10 http://127.0.0.1:11434/api/tags
+LOCAL_ZEKO_GRAPHQL=http://127.0.0.1:19231/graphql .venv/bin/python deployment/validate_local_hosts.py --zeko
+
+Environment paths above replace machine-specific local filesystem paths for publication. No source patches were applied.
+LOCAL_ZEKO_GRAPHQL=http://127.0.0.1:19231/graphql npm run verify:evidence -- ../result/gemma --node

@@ -1,0 +1,12 @@
+{
+  "syntheticDataOnly": true,
+  "humanReview": { "enabled": false, "checkpoints": ["plan_agreement", "before_compute", "before_disclosure", "before_settlement"] },
+  "modelRouting": { "enabled": false, "allowedRoles": ["liaison", "researcher", "reviewer"] },
+  "magicCity": { "enabled": false },
+  "zkTLS": { "enabled": false },
+  "payments": { "enabled": false },
+  "maxBilateralMessagesPerAgent": 12,
+  "maxComputeRunsPerCompany": 1,
+  "algorithm": "synthetic-support-v1",
+  "threshold": 500
+}

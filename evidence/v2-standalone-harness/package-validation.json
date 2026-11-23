@@ -1,0 +1,9 @@
+{
+  "sourceArchiveExtracted": true,
+  "cleanNpmInstall": true,
+  "installCommand": "npm ci --ignore-scripts --offline --cache <existing-local-cache>",
+  "dependencyPackagesInstalled": 109,
+  "extractedPackageTestsPassed": 14,
+  "extractedPackageTestsFailed": 0,
+  "privateRuntimeDirectoriesExcluded": true
+}

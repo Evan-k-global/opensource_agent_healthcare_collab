@@ -1,0 +1,21 @@
+name: research-company-hosts
+services:
+  company-a:
+    image: research-company-a:local
+    build: { context: .., dockerfile: deployment/company-host.Dockerfile, args: { COMPANY: a } }
+    ports: ['127.0.0.1:22221:22']
+    volumes: ['../.local/ssh-hosts/a:/input-keys:ro', 'a-state:/srv/research-collab-demo/.local', 'a-cache:/srv/research-collab-demo/.cache']
+    mem_limit: 5g
+    cpus: 2
+  company-b:
+    image: research-company-b:local
+    build: { context: .., dockerfile: deployment/company-host.Dockerfile, args: { COMPANY: b } }
+    ports: ['127.0.0.1:22222:22']
+    volumes: ['../.local/ssh-hosts/b:/input-keys:ro', 'b-state:/srv/research-collab-demo/.local', 'b-cache:/srv/research-collab-demo/.cache']
+    mem_limit: 5g
+    cpus: 2
+volumes:
+  a-state:
+  b-state:
+  a-cache:
+  b-cache:

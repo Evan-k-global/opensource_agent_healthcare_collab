@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "scope": "Independent-agent reproduction on the same Apple Silicon Mac; agent selected tests and assessed fresh results while parent executed runtime commands using user-granted permissions.",
+  "candidateSha256": "6a1cac3277c19263a8b0c9b01d85b08c185ada26af6693330ded368a0c977dc1",
+  "sourceChanged": false,
+  "runtime": {
+    "node": "20.20.0",
+    "python": "3.12.16",
+    "sdk": "google-antigravity==0.1.10",
+    "zekoProject": "independent-repro-zeko",
+    "zekoEndpoint": "http://127.0.0.1:19231/graphql",
+    "companyProject": "independent-repro-hosts",
+    "modelEndpoint": "http://127.0.0.1:11434",
+    "ollama": "0.40.17",
+    "model": "gemma4:e2b-it-q4_K_M",
+    "modelDigest": "b37049369adfe3d2b653af0ab301a062ca5cbe96ace6aa0d3f2559ee9b563fc2"
+  },
+  "checks": {
+    "nodeTests": {
+      "passed": 14,
+      "failed": 0
+    },
+    "pythonTests": {
+      "passed": 3,
+      "failed": 0
+    },
+    "freshZekoBootstrap": true,
+    "signatureOnlySmokeState": "42",
+    "distributedMock": true,
+    "mockIndependentProofStateVerification": true,
+    "actualGemma": true,
+    "gemmaIndependentProofStateVerification": true
+  },
+  "transitiveVersionsDifferingFromReferenceLock": {
+    "certifi": {
+      "reference": "2026.10.23",
+      "installed": "2026.11.20"
+    },
+    "charset-normalizer": {
+      "reference": "3.5.2",
+      "installed": "3.5.3"
+    },
+    "google-auth": {
+      "reference": "2.62.2",
+      "installed": "2.63.1"
+    },
+    "sse-starlette": {
+      "reference": "3.7.0",
+      "installed": "3.7.1"
+    }
+  },
+  "environmentBlockersResolvedByParentRuntime": [
+    "Subagent sandbox denied localhost listeners, Docker socket access, and Python DNS/package downloads. Parent executed selected commands after user-granted runtime permissions.",
+    "Docker buildx could not write default ~/.docker activity directory; selected writable DOCKER_CONFIG runtime directory and explicit DOCKER_HOST."
+  ],
+  "documentationObservations": [
+    "Earlier candidate contradicted itself about Gemma validation. Final candidate explicitly separates current v0.3 and historical results, resolving that contradiction.",
+    "Final candidate TESTED.md includes an interim independent-agent permission-blocked status; it should be refreshed with the eventual reproduction result."
+  ],
+  "independenceLimits": [
+    "Same physical Mac, Docker engine, image/build caches and shared Ollama model endpoint; not a new human or machine.",
+    "Fresh extracted source, independent Python venv/npm install, unique Zeko identities/ledger/DA and unique company state/cache volumes.",
+    "No parent implementation logs, historical run evidence or original source were used to select or evaluate these tests."
+  ],
+  "securityScope": [
+    "Synthetic data and simulated identity only.",
+    "Real application proofs; development rollup prover, DA quorum zero, no L1 settlement.",
+    "Repeat settlement rejection is client-state-precondition enforcement.",
+    "No claim of autonomous research, real identity, production isolation or model-inference proof."
+  ],
+  "verdict": "Documented unit, distributed mock, actual Gemma, and independent proof/state verification flows reproduced successfully without source edits.",
+  "completedAtUtc": "2026-11-23T18:32:18.060533+00:00",
+  "timingSeconds": {
+    "mockStateAcceptance": 218,
+    "mockFinalHarness": 217,
+    "gemmaStateAcceptance": 424,
+    "gemmaFinalHarness": 446
+  },
+  "cleanup": {
+    "composeStopCommands": "both exited0",
+    "companyHostsStopped": 2,
+    "zekoServicesStopped": 7,
+    "volumesRetained": true,
+    "sharedOllamaAndPrimaryUntouched": true,
+    "note": "Five Zeko services exited137 after Compose stop timeout; verification had completed successfully beforehand."
+  },
+  "candidateHashScope": "Archive hash identifies tested candidate before final documentation/evidence refresh. implementation-sha256.json identifies107 tested implementation files independent of those refreshes."
+}

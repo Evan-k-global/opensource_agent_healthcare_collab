@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "patientId": "PATIENT_PRIVATE_CANARY_SYNTHETIC_001",
+  "featureScore": 55,
+  "consent": "synthetic-demo-only",
+  "age": 42,
+  "condition": "synthetic-H1"
+}

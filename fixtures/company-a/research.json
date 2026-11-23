@@ -1,0 +1,6 @@
+{
+  "synthetic": true,
+  "dataset": "A-proprietary-synthetic-cohort-v1",
+  "records": [72, 80, 61, 87],
+  "privateNotes": "A_PRIVATE_CANARY: synthetic proprietary assay notes; never export rows or notes."
+}

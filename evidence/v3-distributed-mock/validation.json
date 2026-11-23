@@ -1,0 +1,106 @@
+{
+  "sdk": "google-antigravity==0.1.10",
+  "actualGemma": false,
+  "model": "gemma4:e2b-it-q4_K_M",
+  "modelDigest": null,
+  "topology": "two-isolated-Linux-containers-on-one-physical-host",
+  "independentCompanyHarnesses": true,
+  "sharedLocalInferenceServer": true,
+  "sshPinnedHostTrust": true,
+  "physicalMachines": 1,
+  "companies": {
+    "a": {
+      "harness": {
+        "company": "a",
+        "caseId": "77d15077-5134-48dd-a7e2-cd52c7172a30",
+        "agents": [
+          "a-liaison",
+          "a-researcher",
+          "a-reviewer"
+        ],
+        "modelNames": {
+          "a-liaison": "gemma4:e2b-it-q4_K_M",
+          "a-researcher": "gemma4:e2b-it-q4_K_M",
+          "a-reviewer": "gemma4:e2b-it-q4_K_M"
+        },
+        "completedSteps": [
+          {
+            "step": 0,
+            "agent": "a-researcher"
+          },
+          {
+            "step": 1,
+            "agent": "a-reviewer"
+          },
+          {
+            "step": 4,
+            "agent": "a-liaison"
+          },
+          {
+            "step": 6,
+            "agent": "a-researcher"
+          },
+          {
+            "step": 7,
+            "agent": "a-liaison"
+          }
+        ],
+        "elapsedSeconds": 16,
+        "completed": true,
+        "centralCrossCompanyDriver": false
+      },
+      "privateRoomBoundaryChecked": true,
+      "adviceModes": [
+        "mock"
+      ]
+    },
+    "b": {
+      "harness": {
+        "company": "b",
+        "caseId": "77d15077-5134-48dd-a7e2-cd52c7172a30",
+        "agents": [
+          "b-liaison",
+          "b-researcher",
+          "b-reviewer"
+        ],
+        "modelNames": {
+          "b-liaison": "gemma4:e2b-it-q4_K_M",
+          "b-researcher": "gemma4:e2b-it-q4_K_M",
+          "b-reviewer": "gemma4:e2b-it-q4_K_M"
+        },
+        "completedSteps": [
+          {
+            "step": 2,
+            "agent": "b-researcher"
+          },
+          {
+            "step": 3,
+            "agent": "b-reviewer"
+          },
+          {
+            "step": 5,
+            "agent": "b-liaison"
+          },
+          {
+            "step": 8,
+            "agent": "b-researcher"
+          },
+          {
+            "step": 9,
+            "agent": "b-reviewer"
+          }
+        ],
+        "elapsedSeconds": 15,
+        "completed": true,
+        "centralCrossCompanyDriver": false
+      },
+      "privateRoomBoundaryChecked": true,
+      "adviceModes": [
+        "mock"
+      ]
+    }
+  },
+  "realApplicationProofs": false,
+  "settlement": "in-process-local-ledger-acceptance",
+  "completed": true
+}

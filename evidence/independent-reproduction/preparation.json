@@ -1,0 +1,39 @@
+{
+  "reproducer": "independent agent on same Apple Silicon Mac; not a separate person or machine",
+  "candidate": "reproduction-candidate-v03.zip",
+  "sourceChanged": false,
+  "node": "v20.20.0",
+  "python": "3.12.16",
+  "npm": {
+    "command": "npm ci --ignore-scripts --offline --cache <existing-local-cache>",
+    "status": "passed",
+    "addedPackages": 109
+  },
+  "unitTests": {
+    "command": "npm test",
+    "status": "blocked",
+    "reason": "listen EPERM: operation not permitted 127.0.0.1"
+  },
+  "pythonInstall": {
+    "command": ".venv/bin/pip install --no-index --find-links <local-wheel-directory> -r antigravity/requirements.txt",
+    "status": "blocked",
+    "reason": "No matching distribution found for absl-py; cache contains Antigravity and uv but no required transitive wheels"
+  },
+  "freshZeko": {
+    "command": "COMPOSE_PROJECT_NAME=independent-repro-zeko ZEKO_PORT=19231 LOCAL_ZEKO_GRAPHQL=http://127.0.0.1:19231/graphql npm run zeko:up",
+    "status": "blocked before stack creation",
+    "reason": "Docker socket permission denied"
+  },
+  "documentationIssues": [
+    "README v0.3 describes exact Gemma model used for validation while older README and TESTED sections state actual Gemma remains untested",
+    "TESTED still describes independent Antigravity drivers as unvalidated despite README v0.3 reproduction flow"
+  ],
+  "endToEnd": "not started; awaiting refreshed candidate and port release",
+  "documentationIssuesResolvedInFinalPackage": true,
+  "successfulEndToEndReproduction": false,
+  "environmentPermission": "Requested for the independent agent; no successful grant observed yet",
+  "scope": "Preparation of the initial v0.3 candidate; final runtime and end-to-end tests have not yet been independently reproduced",
+  "historicalRecord": true,
+  "supersededBy": "result/REPORT.md",
+  "finalReproductionStatus": "passed on 2026-11-23; see result/summary.json"
+}

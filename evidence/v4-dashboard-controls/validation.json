@@ -1,0 +1,108 @@
+{
+  "sdk": "google-antigravity==0.1.10",
+  "actualGemma": false,
+  "model": "transport-fixture",
+  "modelDigest": null,
+  "remoteModelMetadata": {},
+  "topology": "two-isolated-Linux-containers-on-one-physical-host",
+  "independentCompanyHarnesses": true,
+  "sharedLocalInferenceServer": true,
+  "sshPinnedHostTrust": true,
+  "physicalMachines": 1,
+  "distinctReportedHostIds": true,
+  "companies": {
+    "a": {
+      "harness": {
+        "company": "a",
+        "caseId": "7fa801b2-170c-44ab-8aec-4aed9db59102",
+        "agents": [
+          "a-liaison",
+          "a-researcher",
+          "a-reviewer"
+        ],
+        "modelNames": {
+          "a-liaison": "transport-fixture",
+          "a-researcher": "transport-fixture",
+          "a-reviewer": "transport-fixture"
+        },
+        "completedSteps": [
+          {
+            "step": 0,
+            "agent": "a-researcher"
+          },
+          {
+            "step": 1,
+            "agent": "a-reviewer"
+          },
+          {
+            "step": 4,
+            "agent": "a-liaison"
+          },
+          {
+            "step": 6,
+            "agent": "a-researcher"
+          },
+          {
+            "step": 7,
+            "agent": "a-liaison"
+          }
+        ],
+        "elapsedSeconds": 137,
+        "completed": true,
+        "centralCrossCompanyDriver": false
+      },
+      "privateRoomBoundaryChecked": true,
+      "adviceModes": [
+        "mock"
+      ]
+    },
+    "b": {
+      "harness": {
+        "company": "b",
+        "caseId": "7fa801b2-170c-44ab-8aec-4aed9db59102",
+        "agents": [
+          "b-liaison",
+          "b-researcher",
+          "b-reviewer"
+        ],
+        "modelNames": {
+          "b-liaison": "transport-fixture",
+          "b-researcher": "transport-fixture",
+          "b-reviewer": "transport-fixture"
+        },
+        "completedSteps": [
+          {
+            "step": 2,
+            "agent": "b-researcher"
+          },
+          {
+            "step": 3,
+            "agent": "b-reviewer"
+          },
+          {
+            "step": 5,
+            "agent": "b-liaison"
+          },
+          {
+            "step": 8,
+            "agent": "b-researcher"
+          },
+          {
+            "step": 9,
+            "agent": "b-reviewer"
+          }
+        ],
+        "elapsedSeconds": 137,
+        "completed": true,
+        "centralCrossCompanyDriver": false
+      },
+      "privateRoomBoundaryChecked": true,
+      "adviceModes": [
+        "mock"
+      ]
+    }
+  },
+  "realApplicationProofs": false,
+  "settlement": "in-process-local-ledger-acceptance",
+  "completed": true
+}

@@ -1,0 +1,35 @@
+{
+  "approvalOperator": "simulated-browser-and-HTTP-test",
+  "browserHoldAndApprove": true,
+  "mobile390pxNoOverflow": true,
+  "companyRoomViewsSeparated": true,
+  "remainingApprovals": [
+    {
+      "org": "a",
+      "checkpoint": "before_compute",
+      "decision": "approved"
+    },
+    {
+      "org": "a",
+      "checkpoint": "before_disclosure",
+      "decision": "approved"
+    },
+    {
+      "org": "b",
+      "checkpoint": "before_compute",
+      "decision": "approved"
+    },
+    {
+      "org": "a",
+      "checkpoint": "before_settlement",
+      "decision": "approved"
+    },
+    {
+      "org": "b",
+      "checkpoint": "before_settlement",
+      "decision": "approved"
+    }
+  ],
+  "completed": true,
+  "proofMode": "simulation-no-cryptographic-proof"
+}

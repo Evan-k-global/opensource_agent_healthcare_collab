@@ -1,0 +1,47 @@
+{
+  "sdk": "google-antigravity==0.1.10",
+  "actualGemma": false,
+  "model": "transport-fixture",
+  "modelDigest": null,
+  "topology": "two-isolated-Linux-containers-on-one-physical-host",
+  "independentCompanyHarnesses": true,
+  "sharedLocalInferenceServer": true,
+  "sshPinnedHostTrust": true,
+  "physicalMachines": 1,
+  "distinctReportedHostIds": true,
+  "realApplicationProofs": false,
+  "settlement": "in-process-local-ledger-acceptance",
+  "completed": true,
+  "companies": {
+    "a": {
+      "completed": true,
+      "completedTurns": 5,
+      "agents": [
+        "a-liaison",
+        "a-researcher",
+        "a-reviewer"
+      ],
+      "privateRoomBoundaryChecked": true,
+      "adviceModes": [
+        "mock"
+      ],
+      "modelReprompts": [],
+      "caseId": "e40dde41-c4fb-40b6-b858-03568324814d"
+    },
+    "b": {
+      "completed": true,
+      "completedTurns": 5,
+      "agents": [
+        "b-liaison",
+        "b-researcher",
+        "b-reviewer"
+      ],
+      "privateRoomBoundaryChecked": true,
+      "adviceModes": [
+        "mock"
+      ],
+      "modelReprompts": [],
+      "caseId": "e40dde41-c4fb-40b6-b858-03568324814d"
+    }
+  }
+}

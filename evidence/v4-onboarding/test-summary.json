@@ -1,0 +1,41 @@
+{
+  "node": {
+    "passed": 23,
+    "failed": 0,
+    "testNames": [
+      "company reviews enforce scope, case, hold, finality, and both-party settlement",
+      "model routing holds for a scoped human decision and cannot invent authority",
+      "review expiry fails closed",
+      "either company rejection cancels the peer settlement review immediately",
+      "dashboard authorization and interactive reviews enforce company boundaries end to end",
+      "company workers bind identity to their session, enrolled agents and computation plan",
+      "identity HTTP handshake binds issuer, holder, case, audience and one-time nonce",
+      "model suggestions stay local, advisory, role-bound and fail closed",
+      "SSH workers require pinned host trust, safe arguments and a company-local model",
+      "MCP exposes only two scoped tools and forwards authorization and stale-step failures",
+      "accepted long-running turns poll status without resubmitting and fail on case replacement",
+      "bilateral ideas are encrypted and only the addressed agent can decrypt",
+      "internal agents cannot join the bilateral channel or read the other company channel",
+      "replay and budget limits are enforced even when optional checkpoints are off",
+      "rehashed ciphertext substitution fails the holder signature binding",
+      "cross-case routing and capability substitution are rejected",
+      "private compute requires both companies to agree on the identical plan",
+      "enabled human review fails closed without an approver and honors denial",
+      "fixed circuit settings cannot silently drift from configuration",
+      "model routing is optional and cannot invent an unauthorized role",
+      "Reclaim policy adapter requires trusted SDK verification, pinned content and session binding",
+      "Reclaim adapter rejects stale, excess-disclosure and wrong-organization evidence",
+      "provider polling is cancelled on deadline and explicit shutdown"
+    ]
+  },
+  "python": {
+    "passed": 7,
+    "failed": 0
+  },
+  "initialNodeAttempt": {
+    "passed": 10,
+    "failed": 3,
+    "cause": "Parent ran tests while launcher npm ci was replacing node_modules; missing/truncated o1js WASM. Sequential rerun passed.",
+    "classification": "execution-order error; not a source change"
+  }
+}

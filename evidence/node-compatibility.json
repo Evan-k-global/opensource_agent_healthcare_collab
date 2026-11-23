@@ -1,0 +1,11 @@
+{
+  "sdk": "o1js 2.13.0",
+  "requiredZkappStateLength": 8,
+  "rejectedMovingTag": "compatible-latest-lightnet as of 2026-11-20",
+  "observedFailure": "Mina protocol 4 GraphQL Vector: Length mismatch; HTTP 502",
+  "selectedImageDigest": "sha256:ea8ed42d7925ee37e840050416f2b6f72c8509664d371646880355a385e1b9b4",
+  "source": "https://github.com/MinaProtocol/mina/blob/aa93c44428e7c73cd7b77900634522108b746d18/src/lib/mina_base/zkapp_state.ml",
+  "imageBuildMinaCommit": "aa93c44428e7c73cd7b77900634522108b746d18",
+  "observedDaemonCommit": "33124e34ec1107bb1ba4f86133bb214cdc5462c5",
+  "observedDaemonProtocol": "3.0.0"
+}

@@ -1,0 +1,12 @@
+{
+  "sdk": "google-antigravity==0.1.10",
+  "model": "scripted OpenAI-compatible transport fixture; NOT Gemma",
+  "workflowSteps": 10,
+  "agents": 6,
+  "mcpTools": [
+    "research_status",
+    "research_take_turn"
+  ],
+  "builtinsShellWebFilesystem": false,
+  "actualGemmaRun": false
+}

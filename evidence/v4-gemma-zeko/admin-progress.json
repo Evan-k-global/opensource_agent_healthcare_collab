@@ -1,0 +1,125 @@
+{
+  "synthetic": true,
+  "caseId": "4d0fa51b-1113-4ec9-a2dd-dd77e0cdd92f",
+  "completedSteps": 10,
+  "failed": false,
+  "rooms": [
+    "a-internal",
+    "b-internal",
+    "bilateral-planning"
+  ],
+  "deliveredEnvelopes": 7,
+  "checkpoints": [
+    {
+      "checkpoint": "plan_agreement",
+      "humanReview": "disabled"
+    },
+    {
+      "checkpoint": "plan_agreement",
+      "humanReview": "disabled"
+    },
+    {
+      "checkpoint": "before_compute",
+      "humanReview": "disabled"
+    },
+    {
+      "checkpoint": "before_disclosure",
+      "humanReview": "disabled"
+    },
+    {
+      "checkpoint": "before_compute",
+      "humanReview": "disabled"
+    },
+    {
+      "checkpoint": "before_settlement",
+      "humanReview": "disabled"
+    }
+  ],
+  "controls": {
+    "requests": [],
+    "routes": [
+      {
+        "org": "a",
+        "stage": "discuss",
+        "role": "researcher",
+        "decision": "proceed",
+        "modelMode": "gemma",
+        "at": "2026-11-23T21:05:01.850Z"
+      },
+      {
+        "org": "a",
+        "stage": "review",
+        "role": "reviewer",
+        "decision": "proceed",
+        "modelMode": "gemma",
+        "at": "2026-11-23T21:05:24.413Z"
+      },
+      {
+        "org": "b",
+        "stage": "discuss",
+        "role": "researcher",
+        "decision": "proceed",
+        "modelMode": "gemma",
+        "at": "2026-11-23T21:05:53.829Z"
+      },
+      {
+        "org": "b",
+        "stage": "review",
+        "role": "reviewer",
+        "decision": "proceed",
+        "modelMode": "gemma",
+        "at": "2026-11-23T21:06:17.812Z"
+      },
+      {
+        "org": "a",
+        "stage": "propose",
+        "role": "liaison",
+        "decision": "proceed",
+        "modelMode": "gemma",
+        "at": "2026-11-23T21:06:43.358Z"
+      },
+      {
+        "org": "b",
+        "stage": "accept",
+        "role": "liaison",
+        "decision": "proceed",
+        "modelMode": "gemma",
+        "at": "2026-11-23T21:07:15.325Z"
+      },
+      {
+        "org": "a",
+        "stage": "compute-a",
+        "role": "researcher",
+        "decision": "proceed",
+        "modelMode": "gemma",
+        "at": "2026-11-23T21:07:47.284Z"
+      },
+      {
+        "org": "a",
+        "stage": "aggregate",
+        "role": "liaison",
+        "decision": "proceed",
+        "modelMode": "gemma",
+        "at": "2026-11-23T21:08:26.788Z"
+      },
+      {
+        "org": "b",
+        "stage": "compute-b",
+        "role": "researcher",
+        "decision": "proceed",
+        "modelMode": "gemma",
+        "at": "2026-11-23T21:08:54.046Z"
+      },
+      {
+        "org": "b",
+        "stage": "settle",
+        "role": "reviewer",
+        "decision": "proceed",
+        "modelMode": "gemma",
+        "at": "2026-11-23T21:10:32.448Z"
+      }
+    ]
+  },
+  "privateReports": "Each company host: .local/company-a|b/admin-report.json",
+  "identityHandshake": "simulated-presentations-verified"
+}

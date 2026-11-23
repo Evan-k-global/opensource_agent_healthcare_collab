@@ -1,0 +1,84 @@
+
+> private-research-collaboration-demo@0.3.0 test
+> node --test test/*.test.mjs
+
+TAP version 13
+# Subtest: company workers bind identity to their session, enrolled agents and computation plan
+ok 1 - company workers bind identity to their session, enrolled agents and computation plan
+  ---
+  duration_ms: 327.011083
+  ...
+# Subtest: identity HTTP handshake binds issuer, holder, case, audience and one-time nonce
+ok 2 - identity HTTP handshake binds issuer, holder, case, audience and one-time nonce
+  ---
+  duration_ms: 68.275208
+  ...
+# Subtest: model suggestions stay local, advisory, role-bound and fail closed
+ok 3 - model suggestions stay local, advisory, role-bound and fail closed
+  ---
+  duration_ms: 52.516917
+  ...
+# Subtest: SSH workers require pinned host trust, safe arguments and a company-local model
+ok 4 - SSH workers require pinned host trust, safe arguments and a company-local model
+  ---
+  duration_ms: 0.293541
+  ...
+# Subtest: MCP exposes only two scoped tools and forwards authorization and stale-step failures
+ok 5 - MCP exposes only two scoped tools and forwards authorization and stale-step failures
+  ---
+  duration_ms: 289.2475
+  ...
+# Subtest: bilateral ideas are encrypted and only the addressed agent can decrypt
+ok 6 - bilateral ideas are encrypted and only the addressed agent can decrypt
+  ---
+  duration_ms: 87.809333
+  ...
+# Subtest: internal agents cannot join the bilateral channel or read the other company channel
+ok 7 - internal agents cannot join the bilateral channel or read the other company channel
+  ---
+  duration_ms: 2.234291
+  ...
+# Subtest: replay and budget limits are enforced even when optional checkpoints are off
+ok 8 - replay and budget limits are enforced even when optional checkpoints are off
+  ---
+  duration_ms: 12.479
+  ...
+# Subtest: rehashed ciphertext substitution fails the holder signature binding
+ok 9 - rehashed ciphertext substitution fails the holder signature binding
+  ---
+  duration_ms: 7.3095
+  ...
+# Subtest: cross-case routing and capability substitution are rejected
+ok 10 - cross-case routing and capability substitution are rejected
+  ---
+  duration_ms: 4.841417
+  ...
+# Subtest: private compute requires both companies to agree on the identical plan
+ok 11 - private compute requires both companies to agree on the identical plan
+  ---
+  duration_ms: 1.223917
+  ...
+# Subtest: enabled human review fails closed without an approver and honors denial
+ok 12 - enabled human review fails closed without an approver and honors denial
+  ---
+  duration_ms: 1.074834
+  ...
+# Subtest: fixed circuit settings cannot silently drift from configuration
+ok 13 - fixed circuit settings cannot silently drift from configuration
+  ---
+  duration_ms: 0.40375
+  ...
+# Subtest: model routing is optional and cannot invent an unauthorized role
+ok 14 - model routing is optional and cannot invent an unauthorized role
+  ---
+  duration_ms: 0.926125
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 693.319125

@@ -1,0 +1,15 @@
+{
+  "testedAt": "2026-11-20T22:07:34Z",
+  "freshIdentities": true,
+  "freshLedger": true,
+  "freshPostgresAndDA": true,
+  "reusedLocalMinaL1": true,
+  "nativeCheckpointRecovery": true,
+  "signedZkappStateReadback": "42",
+  "transactionHash": "5Jue2dcStzPUKsBG3Vd2dqzJtkeEFhNc5nCq2E6xTcyFEGXeaVwk",
+  "sequencerBinary": "zeko-run-fake",
+  "rollupProver": "zeko-prover-fake",
+  "l1RollupSettlement": false,
+  "diffs": 2,
+  "signedReceipts": 2
+}

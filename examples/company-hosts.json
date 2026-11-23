@@ -1,0 +1,4 @@
+{
+  "a": { "host": "research-company-a", "directory": "/srv/research-collab-demo", "intelligence": "gemma", "model": "YOUR_INSTALLED_GEMMA_MODEL", "modelBaseUrl": "http://127.0.0.1:11434/v1" },
+  "b": { "host": "research-company-b", "directory": "/srv/research-collab-demo", "intelligence": "gemma", "model": "YOUR_INSTALLED_GEMMA_MODEL", "modelBaseUrl": "http://127.0.0.1:11434/v1" }
+}

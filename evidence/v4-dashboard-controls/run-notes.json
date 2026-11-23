@@ -1,0 +1,30 @@
+{
+  "failuresFoundAndFixed": [
+    {
+      "check": "long interactive review",
+      "failure": "HTTP request response-header timeout while a human checkpoint remained pending",
+      "fix": "Acknowledge one POST; poll GET status. No automatic turn resubmission."
+    },
+    {
+      "check": "joint settlement rejection",
+      "failure": "One company rejection waited for the other company request",
+      "fix": "Immediate rejection cancels outstanding peer review."
+    },
+    {
+      "check": "identity provider cancellation",
+      "failure": "Local rejection could leave SDK polling timers active",
+      "fix": "Cancel SDK session on timeout, completion, failure and close; cancellation regression tested."
+    },
+    {
+      "check": "initial v0.4 Gemma routing run",
+      "failure": "At step8 model narrated an old result without invoking a tool; harness detected no backend progression and stopped",
+      "stateMutationAtFailedStep": false,
+      "fix": "Explicit fresh case/action prompt and at most one corrective model prompt after idle-and-authorized check; no scripted fallback."
+    }
+  ],
+  "pendingExternalChecks": [
+    "Live Reclaim credentials and provider flow",
+    "Two physical company hosts",
+    "Outside-human reproduction"
+  ]
+}

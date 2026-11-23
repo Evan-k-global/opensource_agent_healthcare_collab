@@ -1,0 +1,20 @@
+{
+  "provider": "reclaim",
+  "organizations": {
+    "a": {
+      "providerId": "REPLACE_WITH_REVIEWED_PROVIDER_ID",
+      "hashes": [],
+      "expectedClaims": { "organizationId": "REPLACE_WITH_EXPECTED_COMPANY_A_ID" }
+    },
+    "b": {
+      "providerId": "REPLACE_WITH_REVIEWED_PROVIDER_ID",
+      "hashes": [],
+      "expectedClaims": {
+        "organizationId": "REPLACE_WITH_EXPECTED_COMPANY_B_ID",
+        "idPresent": "true",
+        "ageEligible": "true",
+        "conditionEligible": "true"
+      }
+    }
+  }
+}

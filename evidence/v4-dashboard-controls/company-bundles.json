@@ -1,0 +1,14 @@
+{
+  "a": {
+    "scopedFixtureOnly": true,
+    "privateRuntimeExcluded": true,
+    "skillAndHostGuideIncluded": true,
+    "files": 102
+  },
+  "b": {
+    "scopedFixtureOnly": true,
+    "privateRuntimeExcluded": true,
+    "skillAndHostGuideIncluded": true,
+    "files": 103
+  }
+}

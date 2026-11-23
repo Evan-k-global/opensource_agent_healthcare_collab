@@ -1,0 +1,7 @@
+node_modules
+.local
+.cache
+.venv
+fixtures/company-*/private*
+evidence
+**/__pycache__

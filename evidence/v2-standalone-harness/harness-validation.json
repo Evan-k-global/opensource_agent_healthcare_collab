@@ -1,0 +1,15 @@
+{
+  "sdk": "google-antigravity==0.1.10",
+  "actualGemma": false,
+  "model": "scripted transport fixture",
+  "workflowSteps": 10,
+  "agents": 6,
+  "realApplicationProofs": true,
+  "settlement": "native-Zeko-L2-ledger-acceptance",
+  "companyAdminBoundariesChecked": true,
+  "identityHandshakeBound": true,
+  "fixture": true,
+  "chatRequests": 40,
+  "adviceRequests": 10,
+  "toolCalls": 20
+}

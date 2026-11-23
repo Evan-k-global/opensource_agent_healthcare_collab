@@ -1,0 +1,50 @@
+[
+  {
+    "networkMode": "none",
+    "readonlyRootfs": true,
+    "capDrop": [
+      "ALL"
+    ],
+    "mounts": [
+      {
+        "destination": "/company",
+        "sourceName": "company-b",
+        "writable": false
+      },
+      {
+        "destination": "/output",
+        "sourceName": "company-b",
+        "writable": true
+      },
+      {
+        "destination": "/app/.cache",
+        "sourceName": "company-b",
+        "writable": true
+      }
+    ]
+  },
+  {
+    "networkMode": "none",
+    "readonlyRootfs": true,
+    "capDrop": [
+      "ALL"
+    ],
+    "mounts": [
+      {
+        "destination": "/company",
+        "sourceName": "company-a",
+        "writable": false
+      },
+      {
+        "destination": "/output",
+        "sourceName": "company-a",
+        "writable": true
+      },
+      {
+        "destination": "/app/.cache",
+        "sourceName": "company-a",
+        "writable": true
+      }
+    ]
+  }
+]

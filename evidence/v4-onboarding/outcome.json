@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "archiveSha256": "3b25278f804eff969775c744c9d387934e27c7c7670346a2cc1b18f6a843c77d",
+  "sourceManifestSha256": "16e409ad98602a3b5a009187b5dba0564824a3e0cc6dbfc0be27639f33540468",
+  "sourceFileCount": 125,
+  "sourceChanges": [],
+  "reviewer": "independent Codex subagent, not an outside human",
+  "executionArrangement": "Subagent selected commands and independently inspected resulting source, lock metadata, execution logs and fresh public outcomes. Parent mechanically executed pip, preflight, launcher and tests because the subagent sandbox denied package resolution, Docker and loopback binding.",
+  "mode": {
+    "model": "mock",
+    "actualGemma": false,
+    "applicationProofs": false,
+    "identity": "simulated",
+    "topology": "two local Linux company containers on one physical host",
+    "physicalHostValidation": false,
+    "outsideHumanReview": false
+  },
+  "preflight": {
+    "checks": [
+      {
+        "check": "Node",
+        "ok": true,
+        "detail": "v20.20.0"
+      },
+      {
+        "check": "npm",
+        "ok": true,
+        "detail": "10.8.2"
+      },
+      {
+        "check": "Python",
+        "ok": true,
+        "detail": "3.12.16"
+      },
+      {
+        "check": "SSH",
+        "ok": true,
+        "detail": "OpenSSH_9.4p1, LibreSSL 3.3.6"
+      },
+      {
+        "check": "Docker",
+        "ok": true,
+        "detail": "29.8.2"
+      },
+      {
+        "check": "Compose",
+        "ok": true,
+        "detail": "5.5.0"
+      },
+      {
+        "check": "Port 17410",
+        "ok": true,
+        "detail": "available"
+      },
+      {
+        "check": "Port 7420",
+        "ok": true,
+        "detail": "available"
+      },
+      {
+        "check": "Port 7421",
+        "ok": true,
+        "detail": "available"
+      },
+      {
+        "check": "Port 7422",
+        "ok": true,
+        "detail": "available"
+      },
+      {
+        "check": "Port 17411",
+        "ok": true,
+        "detail": "available"
+      }
+    ],
+    "ready": true
+  },
+  "freshState": {
+    "archiveRuntimeDirectoriesExcluded": true,
+    "primaryRuntimeCopied": false,
+    "project": "v4-onboarding-hosts",
+    "freshCompanyVolumesRequested": true,
+    "caseId": "e40dde41-c4fb-40b6-b858-03568324814d",
+    "publicProofDirectoryAbsent": true
+  },
+  "reuse": [
+    "shared npm cache",
+    "existing Docker image/build layers",
+    "Python 3.12 interpreter; own newly created .venv"
+  ],
+  "tests": {
+    "nodePassed": 23,
+    "pythonPassed": 7,
+    "initialNodeExecutionOrderErrorDisclosed": true
+  },
+  "dependencies": {
+    "nodeInstalledRecordsMatchingLock": 109,
+    "pythonPinsMatchingInstalledMetadata": 43
+  },
+  "limits": [
+    "proof-disabled onboarding only; no application proof, native Zeko rejection or ledger verification in this run",
+    "mock inference only; no independent real Gemma execution",
+    "simulated identity; no live provider verification",
+    "one physical host; not physical separation or outside-human verification",
+    "API/unit authorization and private-boundary assertions passed; no human-operated browser acceptance test"
+  ],
+  "cleanup": {
+    "project": "v4-onboarding-hosts",
+    "bothCompanyContainersStopped": true,
+    "volumesPreserved": true,
+    "primaryZekoNotTargeted": true
+  }
+}

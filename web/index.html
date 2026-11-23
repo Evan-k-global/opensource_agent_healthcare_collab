@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Research rooms · Private collaboration</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><header><a class="brand" href="/">RESEARCH / ROOMS</a><span class="tag">SYNTHETIC DEMONSTRATION</span><span id="connection" role="status">Connecting</span></header>
+<main><section class="intro"><p class="eyebrow" id="scope">PRIVATE COLLABORATION</p><h1>Research together.<br>Keep the source private.</h1><p class="muted">Two research teams. One agreed computation. A shared, verifiable result.</p></section>
+<form id="login"><label for="token">Administrator access token</label><div class="row"><input id="token" type="password" autocomplete="off" placeholder="Paste the token from your private access file"><button>Connect</button></div><p class="muted">Use your company’s link or token. Each view has its own authorization.</p></form>
+<div id="error" class="error" role="alert" hidden></div>
+<div id="dashboard" hidden><section class="metrics" id="metrics"></section><section class="case"><span class="eyebrow">ACTIVE CASE</span><code id="case"></code><span id="mode" class="tag"></span></section>
+<div class="grid"><section class="panel"><div class="section-title"><h2>Execution timeline</h2><span id="step-count"></span></div><ol id="timeline"></ol></section>
+<div><section class="panel"><h2>Trust &amp; controls</h2><div id="trust"></div><div id="reviews"></div><div id="routes"></div></section><section class="panel"><h2>Proof &amp; state</h2><div id="proof"></div></section></div></div>
+<section class="panel" id="rooms-panel"><div class="section-title"><h2>Private research rooms</h2><span class="tag">COMPANY HOST ONLY</span></div><p class="muted">Room summaries stay on this company host. Aggregate openings and raw inputs are omitted.</p><div id="rooms" class="rooms"></div></section>
+<section class="panel" id="advice-panel"><h2>Company-local model advice</h2><div id="advice"></div></section></div>
+<footer>Dummy research only · No clinical meaning · Identity simulation is labeled explicitly · Zeko application-state acceptance, no L1 settlement</footer></main></body></html>

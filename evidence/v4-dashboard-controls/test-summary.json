@@ -1,0 +1,37 @@
+{
+  "nodeTests": 23,
+  "pythonTests": 7,
+  "skillValidation": "passed",
+  "localOnboardingLinks": "passed",
+  "identityProvider": {
+    "sdk": "@reclaimprotocol/js-sdk@5.8.3",
+    "sdkLoads": true,
+    "malformedProofRejected": true,
+    "policyAndSessionTests": "passed; verifier result injected",
+    "liveCredential": "pending"
+  },
+  "externalValidation": {
+    "physicalCompanyHosts": "pending",
+    "outsideHumanReviewer": "pending"
+  },
+  "independentAgentReview": {
+    "originalFindings": 3,
+    "fixed": 3,
+    "remainingCriticalFindings": 0,
+    "scope": "static review and in-memory/unit lifecycle tests"
+  },
+  "approvalTestOperator": "simulated browser/HTTP automation",
+  "sourceLicense": "Apache-2.0; vendor and optional dependency licenses retained",
+  "companyPythonLock": {
+    "pinnedRequirements": 43,
+    "allMatched": true
+  },
+  "gemmaFinalRun": {
+    "completed": true,
+    "stateAcceptanceSeconds": 394,
+    "finalHarnessSeconds": 414,
+    "modelRouting": true,
+    "correctivePrompts": 0,
+    "freshProofAndNodeVerification": "passed"
+  }
+}

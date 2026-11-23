@@ -1,0 +1,7 @@
+{
+  "singleLocalDaNode": true,
+  "quorum": 0,
+  "rollupCommitEnabled": false,
+  "diffs": 5,
+  "signedReceipts": 5
+}

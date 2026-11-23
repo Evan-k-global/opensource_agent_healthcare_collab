@@ -1,0 +1,106 @@
+{
+  "sdk": "google-antigravity==0.1.10",
+  "actualGemma": false,
+  "model": "transport-fixture",
+  "modelDigest": null,
+  "topology": "two-isolated-Linux-containers-on-one-physical-host",
+  "independentCompanyHarnesses": true,
+  "sharedLocalInferenceServer": true,
+  "sshPinnedHostTrust": true,
+  "physicalMachines": 1,
+  "companies": {
+    "a": {
+      "harness": {
+        "company": "a",
+        "caseId": "8d3d82c9-2923-4692-bc1f-d0632d1e6202",
+        "agents": [
+          "a-liaison",
+          "a-researcher",
+          "a-reviewer"
+        ],
+        "modelNames": {
+          "a-liaison": "transport-fixture",
+          "a-researcher": "transport-fixture",
+          "a-reviewer": "transport-fixture"
+        },
+        "completedSteps": [
+          {
+            "step": 0,
+            "agent": "a-researcher"
+          },
+          {
+            "step": 1,
+            "agent": "a-reviewer"
+          },
+          {
+            "step": 4,
+            "agent": "a-liaison"
+          },
+          {
+            "step": 6,
+            "agent": "a-researcher"
+          },
+          {
+            "step": 7,
+            "agent": "a-liaison"
+          }
+        ],
+        "elapsedSeconds": 217,
+        "completed": true,
+        "centralCrossCompanyDriver": false
+      },
+      "privateRoomBoundaryChecked": true,
+      "adviceModes": [
+        "mock"
+      ]
+    },
+    "b": {
+      "harness": {
+        "company": "b",
+        "caseId": "8d3d82c9-2923-4692-bc1f-d0632d1e6202",
+        "agents": [
+          "b-liaison",
+          "b-researcher",
+          "b-reviewer"
+        ],
+        "modelNames": {
+          "b-liaison": "transport-fixture",
+          "b-researcher": "transport-fixture",
+          "b-reviewer": "transport-fixture"
+        },
+        "completedSteps": [
+          {
+            "step": 2,
+            "agent": "b-researcher"
+          },
+          {
+            "step": 3,
+            "agent": "b-reviewer"
+          },
+          {
+            "step": 5,
+            "agent": "b-liaison"
+          },
+          {
+            "step": 8,
+            "agent": "b-researcher"
+          },
+          {
+            "step": 9,
+            "agent": "b-reviewer"
+          }
+        ],
+        "elapsedSeconds": 217,
+        "completed": true,
+        "centralCrossCompanyDriver": false
+      },
+      "privateRoomBoundaryChecked": true,
+      "adviceModes": [
+        "mock"
+      ]
+    }
+  },
+  "realApplicationProofs": true,
+  "settlement": "native-Zeko-L2-ledger-acceptance",
+  "completed": true
+}

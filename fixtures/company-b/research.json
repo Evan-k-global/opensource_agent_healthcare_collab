@@ -1,0 +1,6 @@
+{
+  "synthetic": true,
+  "dataset": "B-proprietary-synthetic-cohort-v1",
+  "records": [45, 62, 53, 70],
+  "privateNotes": "B_PRIVATE_CANARY: synthetic proprietary validation notes."
+}

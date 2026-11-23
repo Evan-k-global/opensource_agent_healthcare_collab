@@ -1,0 +1,21 @@
+{
+  "santaclawz": {
+    "repository": "https://github.com/zeko-labs/santa_clawz-private_agents",
+    "commit": "960b0e78f2d06879f9d4ad8dd1fda301400dd20f",
+    "files": [
+      "agent-communication/envelope",
+      "hashing/digest",
+      "serialization/stable-json"
+    ],
+    "transform": "TypeScript transpilation only"
+  },
+  "amba": {
+    "repository": "https://github.com/zeko-labs/agent-mission-bound-auth",
+    "commit": "83d2b536f2323f9a289c29f1ad9bd38f157d0d8d",
+    "files": [
+      "packages/protocol",
+      "schemas"
+    ],
+    "license": "Apache-2.0"
+  }
+}

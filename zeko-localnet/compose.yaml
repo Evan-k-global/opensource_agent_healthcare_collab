@@ -1,0 +1,70 @@
+name: research-zeko-localnet
+x-zeko: &zeko
+  image: zekolabs/zeko@sha256:ba52e5eeadeb6b96417e3284aae07352f08efd652dd8a5fe60b58476d006046e
+  platform: linux/amd64
+  cpus: 2
+  volumes:
+    - ../.local/zeko/config:/config:ro
+    - ./start.sh:/start.sh:ro
+  entrypoint: [/bin/bash, /start.sh]
+services:
+  bootstrap-metadata:
+    image: node:22-bookworm-slim@sha256:e9f565d32859f0cbfb52125eafe8be39390f24dac302dc3cdf566e8ba3ab21ee
+    command: [node, /app/metadata-fixture.mjs]
+    volumes: ['./metadata-fixture.mjs:/app/metadata-fixture.mjs:ro', '../.local/zeko/config:/config:ro']
+    mem_limit: 128m
+  postgres:
+    image: postgres:16-alpine@sha256:1d5b02d3a9941fbd52437db4107f8c52d6297dac553ca1e5c299ebb3756b4857
+    environment: { POSTGRES_DB: sequencer, POSTGRES_USER: research, POSTGRES_PASSWORD: research }
+    volumes: [postgres:/var/lib/postgresql/data]
+    mem_limit: 512m
+    healthcheck: { test: [CMD-SHELL, 'pg_isready -U research -d sequencer'], interval: 3s, retries: 30 }
+  queue:
+    image: rabbitmq:4-alpine@sha256:3dbd31cb9e4d45dac44de7b73cc45b848028494e98bcab71477386cbd4dc7f56
+    environment: { RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: '+S 1:1', RABBITMQ_DEFAULT_USER: guest, RABBITMQ_DEFAULT_PASS: guest }
+    volumes: [queue:/var/lib/rabbitmq]
+    mem_limit: 512m
+    healthcheck: { test: [CMD, rabbitmq-diagnostics, -q, ping], interval: 5s, retries: 30 }
+  signer:
+    <<: *zeko
+    command: [signer]
+    mem_limit: 512m
+  da:
+    <<: *zeko
+    image: zekolabs/zeko-da@sha256:1e3a1fee18531991c56a23f70fe0f45755bb0847313d37abe83ecc2a4ce05be8
+    command: [da]
+    mem_limit: 1g
+    volumes:
+      - ../.local/zeko/config:/config:ro
+      - ./start.sh:/start.sh:ro
+      - da:/da
+    depends_on:
+      signer: { condition: service_started }
+  development-prover:
+    <<: *zeko
+    command: [development-prover]
+    mem_limit: 2g
+    depends_on:
+      queue: { condition: service_healthy }
+  sequencer:
+    <<: *zeko
+    command: [sequencer]
+    restart: on-failure
+    mem_limit: 4g
+    volumes:
+      - ../.local/zeko/config:/config:ro
+      - ../.local/zeko/ledger:/ledger
+      - ./start.sh:/start.sh:ro
+      - ../.local/zeko/checkpoints:/checkpoints
+    ports: ['127.0.0.1:${ZEKO_PORT:-19230}:1923']
+    depends_on:
+      postgres: { condition: service_healthy }
+      queue: { condition: service_healthy }
+      signer: { condition: service_started }
+      development-prover: { condition: service_started }
+      da: { condition: service_started }
+      bootstrap-metadata: { condition: service_started }
+volumes:
+  postgres:
+  queue:
+  da:

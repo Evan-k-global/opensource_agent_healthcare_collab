@@ -1,0 +1,21 @@
+{
+  "stoppedOnlyProject": "v4-onboarding-hosts",
+  "containers": [
+    {
+      "Name": "v4-onboarding-hosts-company-a-1",
+      "Service": "company-a",
+      "Project": "v4-onboarding-hosts",
+      "State": "exited",
+      "ExitCode": 0
+    },
+    {
+      "Name": "v4-onboarding-hosts-company-b-1",
+      "Service": "company-b",
+      "Project": "v4-onboarding-hosts",
+      "State": "exited",
+      "ExitCode": 0
+    }
+  ],
+  "volumesPreserved": true,
+  "primaryZekoNotTargeted": true
+}

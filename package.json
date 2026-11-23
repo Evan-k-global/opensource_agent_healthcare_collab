@@ -1,0 +1,49 @@
+{
+  "name": "private-research-collaboration-demo",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "demo": "node src/demo.mjs",
+    "demo:proofs": "node src/demo.mjs --proofs",
+    "demo:lightnet": "node src/demo.mjs --proofs --lightnet",
+    "test": "node --test test/*.test.mjs",
+    "mcp": "node src/mcp.mjs",
+    "chain:up": "docker compose --profile chain up -d lightnet",
+    "chain:status": "docker compose --profile chain ps",
+    "chain:ready": "node src/chain-status.mjs",
+    "serve": "node src/server.mjs",
+    "serve:proofs": "node src/server.mjs --proofs",
+    "serve:lightnet": "node src/server.mjs --proofs --lightnet",
+    "workers:build": "docker build -t research-collab-demo:local .",
+    "demo:isolated": "WORKER_ISOLATION=docker node src/demo.mjs --proofs",
+    "verify:evidence": "node src/verify-evidence.mjs",
+    "zeko:init": "node zeko-localnet/bootstrap.mjs",
+    "zeko:up": "npm run zeko:init && docker compose -f zeko-localnet/compose.yaml up -d && npm run zeko:ready && node zeko-localnet/prepare-da.mjs",
+    "zeko:ready": "node zeko-localnet/ready.mjs",
+    "zeko:status": "docker compose -f zeko-localnet/compose.yaml ps",
+    "zeko:logs": "docker compose -f zeko-localnet/compose.yaml logs --tail 60",
+    "zeko:stop": "docker compose -f zeko-localnet/compose.yaml stop",
+    "demo:zeko": "node zeko-localnet/ready.mjs && node src/demo.mjs --proofs --zeko",
+    "serve:zeko": "node zeko-localnet/ready.mjs && node src/server.mjs --proofs --zeko",
+    "admin:report": "node src/admin-report.mjs",
+    "zeko:smoke": "node zeko-localnet/smoke.mjs",
+    "hosts:init": "python3 deployment/init_hosts.py",
+    "hosts:up": "docker compose -f deployment/compose.yaml up -d --build",
+    "hosts:stop": "docker compose -f deployment/compose.yaml stop",
+    "demo:start": "python3 demo.py",
+    "demo:check": "python3 demo.py --mock --check",
+    "test:identity-sdk": "node integrations/reclaim/test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "o1js": "2.13.0",
+    "zod": "4.6.7"
+  },
+  "license": "Apache-2.0"
+}
